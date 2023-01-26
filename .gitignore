@@ -1,12 +1,12 @@
 # https://github.com/github/gitignore/find/main
 #
 # Visual Studio Code
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-!.vscode/*.code-snippets
+.vscode/
+# !vscode/settings.json
+# !vscode/tasks.json
+# !vscode/launch.json
+# !vscode/extensions.json
+# !vscode/*.code-snippets
 
 # Local History for Visual Studio Code
 .history/
@@ -58,6 +58,13 @@ build/Release
 node_modules/
 jspm_packages/
 
+# package
+package-lock.json
+package.json
+
+# webpack
+webpack.config.js
+
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
@@ -67,11 +74,18 @@ web_modules/
 # Optional npm cache directory
 .npm
 
-# Optional eslint cache
+# eslint
 .eslintcache
+.eslintrc.json
 
-# Optional stylelint cache
+# stylelint
 .stylelintcache
+.stylelintrc.json
+
+# prettier
+.prettierignore
+.prettierrc
+.prettierrc.json
 
 # Microbundle cache
 .rpt2_cache/
@@ -105,7 +119,7 @@ out
 
 # Nuxt.js build / generate output
 .nuxt
-dist
+# # dist
 
 # Gatsby files
 .cache/
@@ -114,7 +128,7 @@ dist
 # public
 
 # vuepress build output
-.vuepress/dist
+# # .vuepress/dist
 
 # vuepress v2.x temp and cache directory
 .temp

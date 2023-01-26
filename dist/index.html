@@ -14,9 +14,12 @@
       <header class="head">Todo List</header>
       <!-- nav -->
       <nav class="nav">
+        <!-- nav list -->
         <ul class="nav-list">
+          <!-- nav list item -->
           <li class="nav-list-item">
-            <a href="#" class="list-link">Get my baby back</a>
+            <!-- nav list item link -->
+            <a href="#" class="list-link">Create a todo list</a>
           </li>
           <li class="nav-list-item">
             <a href="#" class="list-link"></a>
@@ -24,111 +27,103 @@
         </ul>
       </nav>
       <!-- content -->
-      <!-- <div class="content"> -->
-      <!-- project area -->
-      <div class="project" id="project">
-        <!-- PROJECT CONTENTS -->
-        <div class="project-contents">
-          <!-- PROJECT CONTENTS -->
-          <!-- project title -->
-          <div class="title">Get my baby back</div>
-          <!-- project notes -->
-          <div class="notes">I'm hoping and praying</div>
-          <!-- project due date -->
-          <div class="due-date">
-            <label for="due-date">Due Date:</label>
-            <input type="date" id="due-date" name="due-date" min="2023-01-01" />
+      <div class="content">
+        <!-- PROJECT CONTENTS: project area -->
+        <div class="project-content">
+          <!-- Project -->
+          <div class="project">
+            <!--* Project completion checkbox -->
+            <div class="project-top-row">
+              <div class="check-div">
+                <!-- I have multiple of these, so can I change id to class with inputs? -->
+                <!-- OR MAYBE THE ANSWER IS TO DYNAMICALLY NAME THESE USING LOOPS AND TEMPLATE LITERALS -->
+                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select this shows 2 different Selects having the same id -->
+                <input
+                  type="checkbox"
+                  class="project-checkbox"
+                  name="project-checkbox"
+                />
+                <label for="project-checkbox"></label>
+              </div>
+              <!-- project title -->
+              <div class="title">Create a todo list</div>
+            </div>
+            <!-- project notes -->
+            <div class="notes">
+              I'm using webpack and learning localStorage. I'm using webpack and
+              learning localStorage. I'm using webpack and learning
+              localStorage. I'm using webpack and learning localStorage. I'm
+              using webpack and learning localStorage.
+            </div>
+            <!-- project due date -->
+            <div class="due-date">
+              Due Date
+              <input type="date" list="project-due-date" />
+              <datalist id="project-due-date"> </datalist>
+            </div>
+            <!-- project priority -->
+            <div class="priority">
+              <label for="project-priority">Priority</label>
+              <input
+                list="project-priorities"
+                id="project-priority"
+                name="project-priority"
+              />
+              <datalist id="project-priorities">
+                <option value="Low"></option>
+                <option value="Medium"></option>
+                <option value="High"></option>
+              </datalist>
+            </div>
           </div>
-          <!-- project priority -->
-          <div class="priority">
-            <label for="priority-select"></label>
-            <select name="priority" id="priority-select">
-              <option value="priority">
-                <span class="first-option">Priority</span>
-              </option>
-              <option value="low">Low</option>
-              <option value="medium">Medium</option>
-              <option value="high">High</option>
-            </select>
-          </div>
-          <!-- PROJECT CONTENTS -->
         </div>
         <!-- PROJECT CONTENTS -->
         <!-- TODO CONTENTS -->
-        <div class="todo-contents">
-          <!-- TODO CONTENTS -->
+        <div class="todo-content">
           <!--* Todo card -->
           <div class="todo">
             <!--* Todo completion checkbox -->
-            <div class="check-div">
-              <input type="checkbox" id="complete" name="complete" />
-              <label for="complete"></label>
+            <div class="todo-top-row">
+              <div class="check-div">
+                <input
+                  type="checkbox"
+                  class="todo-checkbox"
+                  name="todo-checkbox"
+                />
+                <label for="todo-checkbox"></label>
+              </div>
+              <!--* Todo title -->
+              <div class="title">JavaScript</div>
             </div>
-            <!--* Todo title -->
-            <div class="title">Buy shoes</div>
             <!--* Todo notes -->
-            <div class="notes">Check out Amazon.com for some Adidas</div>
-            <!--* Todo due date -->
-            <div class="due-date">06/12/23</div>
-            <!--* Todo priority -->
-            <div class="priority">High</div>
-          </div>
-          <!-- TODO CONTENTS -->
-        </div>
-<<<<<<< HEAD
-        <!-- <<<<todo cards in project area??? or todos section below project area? >>>> -->
-        <div class="todos">
-          <!--* Todo card -->
-          <div class="todo" id="todo1">
-            <!--* Todo completion checkbox -->
-            <div class="check-div">
-              <input type="checkbox" id="complete" name="complete" />
-              <label for="complete"></label>
+            <div class="notes">
+              Need to add more functions. Need to add more functions. Need to
+              add more functions. Need to add more functions. Need to add more
+              functions.
             </div>
-            <!--* Todo title -->
-            <div class="title" id="title1">Get groceries</div>
-            <!--* Todo notes -->
-            <div class="notes">Go to Whole Foods</div>
             <!--* Todo due date -->
             <div class="due-date">
-              <label for="due-date">Due Date:</label>
-              <input
-                type="date"
-                id="due-date"
-                name="due-date"
-                min="2023-01-01" />
+              Due Date
+              <input type="date" list="todo-due-date" />
+              <datalist id="todo-due-date"> </datalist>
             </div>
             <!--* Todo priority -->
             <div class="priority">
-              <fieldset>
-                <legend>Priority</legend>
-                <!-- high priority -->
-                <div>
-                  <input type="radio" id="high" name="priority" value="high" />
-                  <label for="high">High</label>
-                </div>
-                <!-- medium priority -->
-                <div>
-                  <input
-                    type="radio"
-                    id="medium"
-                    name="priority"
-                    value="medium" />
-                  <label for="medium">Medium</label>
-                </div>
-                <!-- low priority -->
-                <div>
-                  <input type="radio" id="low" name="priority" value="low" />
-                  <label for="low">Low</label>
-                </div>
-              </fieldset>
+              <label for="todo-priority">Priority</label>
+              <input
+                list="todo-priorities"
+                id="todo-priority"
+                name="todo-priority"
+              />
+              <datalist id="todo-priorities">
+                <option value="Low"></option>
+                <option value="Medium"></option>
+                <option value="High"></option>
+              </datalist>
             </div>
           </div>
         </div>
-        <!--  -->
-=======
         <!-- TODO CONTENTS -->
->>>>>>> 8647afa (these are a work in progress)
       </div>
       <!--  -->
       <!-- </div> -->
