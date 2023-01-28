@@ -15,3 +15,9 @@ Earlier projects do what they're supposed to do, but I wasn't aware of SOLID pri
 ## Lessons Learned:
 
 I've learned the basics of Webpack.
+
+## Recent Projects:
+
+Library Project: https://hddev8.github.io/library-project/
+
+Tic Tac Toe: https://hddev8.github.io/tic-tac-toe/
