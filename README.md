@@ -10,8 +10,8 @@ I use mostly CSS Grid and a little Flexbox for the layout.
 
 ## Optimizations:
 
-I'm using Factory Functions and trying to incorporate SOLID principles. 
+Earlier projects work, but I wasn't aware of SOLID principles. For this project, I'm using Factory Functions, learning more about SOLID principles, and trying to incorporate them. 
 
 ## Lessons Learned:
 
-I'm learning how to use Webpack.
+I've learned the basics of Webpack.
