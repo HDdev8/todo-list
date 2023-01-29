@@ -10,7 +10,7 @@ I use mostly CSS Grid and a little Flexbox for the layout.
 
 ## Optimizations:
 
-Earlier projects do what they're supposed to do, but they're a bit disorganized, and I wasn't aware of SOLID principles. For this project, I'm using Factory Functions, learning more about SOLID principles, and trying to incorporate them. 
+Earlier projects do what they're supposed to do, but they're a bit disorganized, and I wasn't aware of SOLID principles, which the Odin Project is teaching at this stage of the course. For this project, I'm using Factory Functions, learning more about SOLID principles, and trying to incorporate them. 
 
 ## Lessons Learned:
 
