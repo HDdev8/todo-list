@@ -14,7 +14,7 @@ Earlier projects do what they're supposed to do, but they're a bit disorganized,
 
 ## Lessons Learned:
 
-I've learned the basics of Webpack.
+I'm learning the basics of Webpack. I'm also incorporating localStorage for the first time.
 
 ## Recent Projects:
 
