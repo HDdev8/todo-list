@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Todo List</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- header -->
+      <header class="head">Todo List</header>
+      <!-- nav -->
+      <nav class="nav">
+        <ul class="nav-list">
+          <li class="nav-list-item">
+            <a href="#" class="list-link">Get my baby back</a>
+          </li>
+          <li class="nav-list-item">
+            <a href="#" class="list-link"></a>
+          </li>
+        </ul>
+      </nav>
+      <!-- content -->
+      <!-- <div class="content"> -->
+      <!-- project area -->
+      <div class="project" id="project">
+        <!-- PROJECT CONTENTS -->
+        <div class="project-contents">
+          <!-- PROJECT CONTENTS -->
+          <!-- project title -->
+          <div class="title">Get my baby back</div>
+          <!-- project notes -->
+          <div class="notes">I'm hoping and praying</div>
+          <!-- project due date -->
+          <div class="due-date">
+            <label for="due-date">Due Date:</label>
+            <input type="date" id="due-date" name="due-date" min="2023-01-01" />
+          </div>
+          <!-- project priority -->
+          <div class="priority">
+            <label for="priority-select"></label>
+            <select name="priority" id="priority-select">
+              <option value="priority">
+                <span class="first-option">Priority</span>
+              </option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+          <!-- PROJECT CONTENTS -->
+        </div>
+        <!-- PROJECT CONTENTS -->
+        <!-- TODO CONTENTS -->
+        <div class="todo-contents">
+          <!-- TODO CONTENTS -->
+          <!--* Todo card -->
+          <div class="todo">
+            <!--* Todo completion checkbox -->
+            <div class="check-div">
+              <input type="checkbox" id="complete" name="complete" />
+              <label for="complete"></label>
+            </div>
+            <!--* Todo title -->
+            <div class="title">Buy shoes</div>
+            <!--* Todo notes -->
+            <div class="notes">Check out Amazon.com for some Adidas</div>
+            <!--* Todo due date -->
+            <div class="due-date">06/12/23</div>
+            <!--* Todo priority -->
+            <div class="priority">High</div>
+          </div>
+          <!-- TODO CONTENTS -->
+        </div>
+<<<<<<< HEAD
+        <!-- <<<<todo cards in project area??? or todos section below project area? >>>> -->
+        <div class="todos">
+          <!--* Todo card -->
+          <div class="todo" id="todo1">
+            <!--* Todo completion checkbox -->
+            <div class="check-div">
+              <input type="checkbox" id="complete" name="complete" />
+              <label for="complete"></label>
+            </div>
+            <!--* Todo title -->
+            <div class="title" id="title1">Get groceries</div>
+            <!--* Todo notes -->
+            <div class="notes">Go to Whole Foods</div>
+            <!--* Todo due date -->
+            <div class="due-date">
+              <label for="due-date">Due Date:</label>
+              <input
+                type="date"
+                id="due-date"
+                name="due-date"
+                min="2023-01-01" />
+            </div>
+            <!--* Todo priority -->
+            <div class="priority">
+              <fieldset>
+                <legend>Priority</legend>
+                <!-- high priority -->
+                <div>
+                  <input type="radio" id="high" name="priority" value="high" />
+                  <label for="high">High</label>
+                </div>
+                <!-- medium priority -->
+                <div>
+                  <input
+                    type="radio"
+                    id="medium"
+                    name="priority"
+                    value="medium" />
+                  <label for="medium">Medium</label>
+                </div>
+                <!-- low priority -->
+                <div>
+                  <input type="radio" id="low" name="priority" value="low" />
+                  <label for="low">Low</label>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+=======
+        <!-- TODO CONTENTS -->
+>>>>>>> 8647afa (these are a work in progress)
+      </div>
+      <!--  -->
+      <!-- </div> -->
+      <!-- footer -->
+      <footer class="footer">
+        <!-- nav-side footer -->
+        <div class="nav-footer">
+          <button type="button" class="new-list">+ New List</button>
+        </div>
+        <!-- content-side footer -->
+        <div class="content-footer">
+          <button type="button" class="new-todo">+ New Todo</button>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
