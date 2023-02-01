@@ -10,34 +10,20 @@
   </head>
   <body>
     <div class="wrapper">
-      <!-- header -->
       <header class="head">Todo List</header>
-      <!-- nav -->
       <nav class="nav">
-        <!-- nav list -->
         <ul class="nav-list">
-          <!-- nav list item -->
           <li class="nav-list-item">
-            <!-- nav list item link -->
-            <a href="#" class="list-link">Create a todo list</a>
-          </li>
-          <li class="nav-list-item">
-            <a href="#" class="list-link"></a>
+            <a href="#" class="list-link">Project 1</a>
           </li>
         </ul>
       </nav>
-      <!-- content -->
       <div class="content">
-        <!-- PROJECT CONTENTS: project area -->
+        <!-- PROJECT CONTENTS -->
         <div class="project-content">
-          <!-- Project -->
           <div class="project">
-            <!--* Project completion checkbox -->
             <div class="project-top-row">
-              <div class="check-div">
-                <!-- I have multiple of these, so can I change id to class with inputs? -->
-                <!-- OR MAYBE THE ANSWER IS TO DYNAMICALLY NAME THESE USING LOOPS AND TEMPLATE LITERALS -->
-                <!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select this shows 2 different Selects having the same id -->
+              <div class="project-checkbox-div">
                 <input
                   type="checkbox"
                   class="project-checkbox"
@@ -45,24 +31,20 @@
                 />
                 <label for="project-checkbox"></label>
               </div>
-              <!-- project title -->
-              <div class="title">Create a todo list</div>
+              <div class="project-title-div">Project 1</div>
             </div>
-            <!-- project notes -->
-            <div class="notes">
-              I'm using webpack and learning localStorage. I'm using webpack and
-              learning localStorage. I'm using webpack and learning
-              localStorage. I'm using webpack and learning localStorage. I'm
-              using webpack and learning localStorage.
+            <div class="project-notes-div">Notes</div>
+            <div class="project-due-date-div">
+              <label for="project-due-date">Due Date</label>
+              <input
+                type="date"
+                list="project-due-dates"
+                id="project-due-date"
+                name="project-due-date"
+              />
+              <datalist id="project-due-dates"></datalist>
             </div>
-            <!-- project due date -->
-            <div class="due-date">
-              Due Date
-              <input type="date" list="project-due-date" />
-              <datalist id="project-due-date"> </datalist>
-            </div>
-            <!-- project priority -->
-            <div class="priority">
+            <div class="project-priority-div">
               <label for="project-priority">Priority</label>
               <input
                 list="project-priorities"
@@ -77,63 +59,12 @@
             </div>
           </div>
         </div>
-        <!-- PROJECT CONTENTS -->
-        <!-- TODO CONTENTS -->
-        <div class="todo-content">
-          <!--* Todo card -->
-          <div class="todo">
-            <!--* Todo completion checkbox -->
-            <div class="todo-top-row">
-              <div class="check-div">
-                <input
-                  type="checkbox"
-                  class="todo-checkbox"
-                  name="todo-checkbox"
-                />
-                <label for="todo-checkbox"></label>
-              </div>
-              <!--* Todo title -->
-              <div class="title">JavaScript</div>
-            </div>
-            <!--* Todo notes -->
-            <div class="notes">
-              Need to add more functions. Need to add more functions. Need to
-              add more functions. Need to add more functions. Need to add more
-              functions.
-            </div>
-            <!--* Todo due date -->
-            <div class="due-date">
-              Due Date
-              <input type="date" list="todo-due-date" />
-              <datalist id="todo-due-date"> </datalist>
-            </div>
-            <!--* Todo priority -->
-            <div class="priority">
-              <label for="todo-priority">Priority</label>
-              <input
-                list="todo-priorities"
-                id="todo-priority"
-                name="todo-priority"
-              />
-              <datalist id="todo-priorities">
-                <option value="Low"></option>
-                <option value="Medium"></option>
-                <option value="High"></option>
-              </datalist>
-            </div>
-          </div>
-        </div>
         <!-- TODO CONTENTS -->
       </div>
-      <!--  -->
-      <!-- </div> -->
-      <!-- footer -->
       <footer class="footer">
-        <!-- nav-side footer -->
         <div class="nav-footer">
           <button type="button" class="new-list">+ New List</button>
         </div>
-        <!-- content-side footer -->
         <div class="content-footer">
           <button type="button" class="new-todo">+ New Todo</button>
         </div>
