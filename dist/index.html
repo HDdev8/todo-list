@@ -31,9 +31,22 @@
                 />
                 <label for="project-checkbox"></label>
               </div>
-              <div class="project-title-div">Project 1</div>
+              <div class="project-title-div">
+                <textarea
+                  id="project-title"
+                  class="project-title"
+                  placeholder="Project 1"
+                ></textarea>
+              </div>
             </div>
-            <div class="project-notes-div">Notes</div>
+            <div class="project-notes-div">
+              <textarea
+                id="project-note"
+                class="project-note"
+                rows="10"
+                placeholder="Notes"
+              ></textarea>
+            </div>
             <div class="project-due-date-div">
               <label for="project-due-date">Due Date</label>
               <input
@@ -59,14 +72,18 @@
             </div>
           </div>
         </div>
+        <div class="todo-content">
+          <!-- Editable? -->
+        </div>
+        <!-- Editable? -->
         <!-- TODO CONTENTS -->
       </div>
       <footer class="footer">
         <div class="nav-footer">
-          <button type="button" class="new-list">+ New List</button>
+          <button type="button" class="list-button">+ New List</button>
         </div>
         <div class="content-footer">
-          <button type="button" class="new-todo">+ New Todo</button>
+          <button type="button" class="todo-button">+ New Todo</button>
         </div>
       </footer>
     </div>
