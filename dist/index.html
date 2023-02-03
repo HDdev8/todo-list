@@ -14,12 +14,13 @@
       <nav class="nav">
         <ul class="nav-list">
           <li class="nav-list-item">
-            <a href="#" class="list-link">Project 1</a>
+            Project 1
+            <!-- <a href="" class="list-link">Project 1</a> -->
           </li>
+          <!-- <li class="nav-list-item">Project 2(is not a link"a")</li> -->
         </ul>
       </nav>
       <div class="content">
-        <!-- PROJECT CONTENTS -->
         <div class="project-content">
           <div class="project">
             <div class="project-top-row">
@@ -32,20 +33,13 @@
                 <label for="project-checkbox"></label>
               </div>
               <div class="project-title-div">
-                <textarea
-                  id="project-title"
-                  class="project-title"
-                  placeholder="Project 1"
-                ></textarea>
+                <p id="project-title" class="project-title">Project Title</p>
               </div>
             </div>
             <div class="project-notes-div">
-              <textarea
-                id="project-note"
-                class="project-note"
-                rows="10"
-                placeholder="Notes"
-              ></textarea>
+              <p id="project-notes" class="project-notes" rows="10">
+                Project Notes
+              </p>
             </div>
             <div class="project-due-date-div">
               <label for="project-due-date">Due Date</label>
@@ -72,11 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="todo-content">
-          <!-- Editable? -->
-        </div>
-        <!-- Editable? -->
-        <!-- TODO CONTENTS -->
+        <div class="todo-content"></div>
       </div>
       <footer class="footer">
         <div class="nav-footer">
@@ -84,6 +74,7 @@
         </div>
         <div class="content-footer">
           <button type="button" class="todo-button">+ New Todo</button>
+          <button type="button" class="edit-button">Edit</button>
         </div>
       </footer>
     </div>
