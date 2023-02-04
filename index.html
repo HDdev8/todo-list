@@ -13,16 +13,12 @@
       <header class="head">Todo List</header>
       <nav class="nav">
         <ul class="nav-list">
-          <li class="nav-list-item">
-            Project 1
-            <!-- <a href="" class="list-link">Project 1</a> -->
-          </li>
-          <!-- <li class="nav-list-item">Project 2(is not a link"a")</li> -->
+          <li class="nav-list-item" data-id="01201201">Project 1</li>
         </ul>
       </nav>
       <div class="content">
         <div class="project-content">
-          <div class="project">
+          <div class="project" data-id="01201201">
             <div class="project-top-row">
               <div class="project-checkbox-div">
                 <input
@@ -33,11 +29,18 @@
                 <label for="project-checkbox"></label>
               </div>
               <div class="project-title-div">
-                <p id="project-title" class="project-title">Project Title</p>
+                <p id="project-title" class="project-title" data-id="01201201">
+                  Project Title
+                </p>
               </div>
             </div>
             <div class="project-notes-div">
-              <p id="project-notes" class="project-notes" rows="10">
+              <p
+                id="project-notes"
+                class="project-notes"
+                rows="10"
+                data-id="01201201"
+              >
                 Project Notes
               </p>
             </div>
@@ -48,6 +51,7 @@
                 list="project-due-dates"
                 id="project-due-date"
                 name="project-due-date"
+                data-id="01201201"
               />
               <datalist id="project-due-dates"></datalist>
             </div>
@@ -57,6 +61,7 @@
                 list="project-priorities"
                 id="project-priority"
                 name="project-priority"
+                data-id="01201201"
               />
               <datalist id="project-priorities">
                 <option value="Low"></option>
@@ -70,10 +75,10 @@
       </div>
       <footer class="footer">
         <div class="nav-footer">
-          <button type="button" class="list-button">+ New List</button>
+          <button type="button" class="list-button">New Project</button>
         </div>
         <div class="content-footer">
-          <button type="button" class="todo-button">+ New Todo</button>
+          <button type="button" class="todo-button">New Todo</button>
           <button type="button" class="edit-button">Edit</button>
         </div>
       </footer>
