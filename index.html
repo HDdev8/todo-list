@@ -9,31 +9,29 @@
     <script src="./main.js" defer></script>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="container">
       <header class="head">Todo List</header>
       <nav class="nav">
-        <ul class="nav-list">
-          <!-- <li class="nav-list-item" data-id=""></li> -->
-        </ul>
+        <ul class="nav-list"></ul>
       </nav>
       <div class="content">
-        <div class="project-content">
+        <div class="project-container">
           <div class="project">
             <div class="project-top-row">
               <div class="project-checkbox-div">
                 <input
                   type="checkbox"
-                  class="project-checkbox"
+                  id="project-checkbox"
                   name="project-checkbox"
                 />
                 <label for="project-checkbox"></label>
               </div>
               <div class="project-title-div">
-                <p id="project-title" class="project-title"></p>
+                <p class="project-title"></p>
               </div>
             </div>
             <div class="project-notes-div">
-              <p id="project-notes" class="project-notes"></p>
+              <p class="project-notes"></p>
             </div>
             <div class="project-due-date-div">
               <label for="project-due-date">Due Date</label>
@@ -42,6 +40,7 @@
                 list="project-due-dates"
                 id="project-due-date"
                 name="project-due-date"
+                disabled
               />
               <datalist id="project-due-dates"></datalist>
             </div>
@@ -51,6 +50,7 @@
                 list="project-priorities"
                 id="project-priority"
                 name="project-priority"
+                disabled
               />
               <datalist id="project-priorities">
                 <option value="Low"></option>
@@ -60,15 +60,20 @@
             </div>
           </div>
         </div>
-        <div class="todo-content"></div>
+        <div class="todo-container"></div>
       </div>
       <footer class="footer">
         <div class="nav-footer">
-          <button type="button" class="list-button">New Project</button>
+          <button type="button" class="new-project-button">New Project</button>
         </div>
         <div class="content-footer">
-          <button type="button" class="todo-button">New Todo</button>
-          <button type="button" class="edit-button">Edit</button>
+          <button type="button" class="project-edit-button"
+            >Edit Project</button
+          >
+          <button type="button" class="project-delete-button"
+            >Delete Project</button
+          >
+          <button type="button" class="new-todo-button">New Todo</button>
         </div>
       </footer>
     </div>
