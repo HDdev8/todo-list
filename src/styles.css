@@ -1,0 +1,596 @@
+/* "Reset" */
+*::before,
+*,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Font */
+@font-face {
+  font-family: InterThin;
+  src: url("./Inter-Thin.woff2") format("woff2"),
+    url("./Inter-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: InterExtralight;
+  src: url("./Inter-ExtraLight.woff2") format("woff2"),
+    url("./Inter-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: InterLight;
+  src: url("./Inter-Light.woff2") format("woff2"),
+    url("./Inter-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: InterRegular;
+  src: url("./Inter-Regular.woff2") format("woff2"),
+    url("./Inter-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: InterMedium;
+  src: url("./Inter-Medium.woff2") format("woff2"),
+    url("./Inter-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: InterSemibold;
+  src: url("./Inter-SemiBold.woff2") format("woff2"),
+    url("./Inter-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: InterBold;
+  src: url("./Inter-Bold.woff2") format("woff2"),
+    url("./Inter-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  font-family: InterThin, InterExtralight, InterLight, InterRegular, InterMedium,
+    InterSemibold, InterBold, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  display: grid;
+  max-height: 100vh;
+  width: 100vw;
+  background-color: #fff;
+  color: #444;
+}
+
+.todo,
+.todo-large {
+  width: 15rem;
+}
+
+/* Mobile width */
+@media (max-width: 31.24rem) {
+  .container {
+    grid-template-rows: 1fr 1fr 6fr 1fr;
+    grid-template-areas:
+      "header"
+      "nav"
+      "content"
+      "footer";
+  }
+
+  .todo,
+  .todo-large {
+    width: 20rem;
+  }
+
+  textarea[id="todo-notes"] {
+    width: 14rem;
+  }
+
+  .nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2.5rem;
+    height: 3.5rem;
+    overflow-y: scroll;
+    align-items: center;
+    gap: 0.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    max-width: 30rem;
+  }
+}
+
+/* Bigger screens */
+@media (max-width: 43.74rem) {
+  .container {
+    grid-template-rows: 1fr 1fr 8fr 1fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+      "header  header"
+      "nav     nav"
+      "content content"
+      "footer  footer";
+  }
+
+  textarea[id="todo-notes"] {
+    width: 20rem;
+  }
+
+  .todo,
+  .todo-large {
+    width: 25rem;
+  }
+
+  .nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: 2.5rem;
+    height: 3.5rem;
+    overflow-y: scroll;
+    align-items: center;
+    gap: 0.25rem;
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    max-width: 43rem;
+  }
+}
+
+/* Biggest screen */
+@media (min-width: 43.75rem) {
+  .container {
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 10fr 1fr;
+    grid-template-areas:
+      "header header header"
+      "nav content content"
+      "footer footer  footer";
+  }
+
+  textarea[id="todo-notes"] {
+    width: 25rem;
+  }
+
+  .todo,
+  .todo-large {
+    width: 30rem;
+  }
+
+  .nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Head */
+.head {
+  grid-area: header;
+  background-color: #d2393a;
+
+  color: #fff;
+  padding: 1rem;
+  font-family: InterSemibold, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}
+
+/* Nav */
+.nav {
+  grid-area: nav;
+  background-color: #f9fafb;
+  color: #383b3f;
+  border: 0.0625rem solid #e2e8f0;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  overflow-y: scroll;
+}
+
+.nav > ul {
+  list-style: none;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #383b3f;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.nav li:hover,
+.nav a:hover {
+  background-color: #5074ed;
+  color: white;
+}
+
+.nav li:active,
+.nav a:active {
+  background-color: #3962ea;
+  color: white;
+}
+
+/* Content */
+.content {
+  grid-area: content;
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  border: 0.0625rem solid #e2e8f0;
+  border-left: 0;
+  overflow-y: scroll;
+  background-color: white;
+}
+
+/* Project */
+.project-container {
+  grid-row: 1;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+
+.project {
+  display: grid;
+  grid-template-rows: 2rem 1fr 1.5rem 1.5rem;
+  gap: 1rem;
+}
+
+.project-top-row {
+  padding: 0.25rem 0 0.25rem;
+  grid-row: 1;
+  grid-column: 1;
+  display: grid;
+  align-content: center;
+}
+
+.project-checkbox-div,
+.project-title-div {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  font-family: InterMedium, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.project-title-div {
+  margin-left: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.project-notes-div {
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  grid-row: 2;
+  padding-right: 20%;
+  line-height: 1.5rem;
+}
+
+.project-due-date-div {
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  grid-row: 3;
+}
+
+.project-priority-div {
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  grid-row: 4;
+}
+
+/** Todo */
+.todo-container {
+  grid-row: 2;
+  padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.todo {
+  height: fit-content;
+  z-index: 5;
+  flex: 1;
+
+  border: 0.0625rem solid #e2e8f0;
+  background-color: white;
+  display: grid;
+  grid-template-rows: 2rem 1fr 2rem 2rem;
+  grid-template-columns: 1fr;
+
+  border-radius: 0.25rem;
+  -webkit-border-radius: 0.25rem;
+  -moz-border-radius: 0.25rem;
+  -ms-border-radius: 0.25rem;
+  -o-border-radius: 0.25rem;
+  gap: 0.5rem;
+}
+
+.todo-small {
+  height: fit-content;
+  z-index: 5;
+  flex: 1;
+  height: 2rem;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+
+.todo-top-row {
+  grid-row: 1;
+  display: grid;
+  align-items: center;
+  border-bottom: 0.05rem solid #e2e8f0;
+  grid-template-columns: 5fr 2fr 1fr;
+  padding-right: 0.5rem;
+}
+
+.todo-checkbox-div,
+.todo-title-div {
+  grid-row: 1;
+  grid-column: 1;
+  align-self: center;
+  font-family: InterMedium, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.todo-edit-button {
+  grid-column: 2;
+  grid-row: 1;
+  width: 4rem;
+  height: 1.5rem;
+  font-family: InterMedium, Verdana, Geneva, Tahoma, sans-serif;
+  justify-self: end;
+  align-self: center;
+  color: black;
+  border-radius: 1rem;
+  border: 0.0125rem solid #cbd5e1;
+  background-color: #f1f5f9;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.todo-delete-button {
+  grid-column: 3;
+  grid-row: 1;
+  width: 1.5rem;
+  height: 1.5rem;
+  font-family: InterMedium, Verdana, Geneva, Tahoma, sans-serif;
+  justify-self: end;
+  align-self: center;
+  color: black;
+  border-radius: 1rem;
+  border: 0.0125rem solid #cbd5e1;
+  background-color: #f1f5f9;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.todo-top-row,
+.todo-notes-div,
+.todo-due-date-div,
+.todo-priority-div {
+  padding-left: 0.5rem;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.todo-title-div {
+  margin-left: 1.5rem;
+}
+
+.todo-notes-div {
+  grid-row: 2;
+  align-self: center;
+}
+
+.todo-due-date-div {
+  grid-row: 3;
+  align-self: center;
+}
+
+.todo-priority-div {
+  grid-row: 4;
+  align-self: center;
+}
+datalist {
+  display: flex;
+  flex-direction: column;
+  writing-mode: vertical-lr;
+  width: 5.5rem;
+}
+
+input[list="project-due-dates"],
+input[list="project-priorities"],
+input[list="todo-due-dates"],
+input[list="todo-priorities"] {
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  height: 1.15rem;
+  font-size: 0.875rem;
+}
+
+input[list="project-priorities"],
+input[list="todo-priorities"] {
+  width: 5.5rem;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas: "nav-footer content-footer content-footer";
+}
+
+.nav-footer {
+  background-color: #f9fafb;
+  border-right: 0.0625rem solid #e2e8f0;
+}
+
+.content-footer {
+  background-color: #fff;
+  grid-template-columns: 1fr 1fr 3fr;
+}
+
+.nav-footer,
+.content-footer {
+  padding: 1rem;
+  display: grid;
+  align-items: center;
+}
+
+button.new-todo-button,
+button.new-project-button,
+button.project-edit-button,
+button.project-delete-button {
+  grid-row: 1;
+  color: black;
+  width: 6rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: 0.0125rem solid #cbd5e1;
+  background-color: #f1f5f9;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+button.project-edit-button {
+  grid-column: 1;
+}
+
+button.project-delete-button {
+  grid-column: 2;
+}
+button.new-todo-button {
+  grid-column: 3;
+  justify-self: center;
+}
+
+button:hover {
+  background-color: #cbd5e1;
+  color: black;
+}
+
+button:active {
+  background-color: #e2e8f0;
+  color: black;
+}
+
+.view {
+  border: 0.0625rem solid black;
+}
+
+.edit:focus {
+  outline: none;
+}
+
+.project-title-div,
+.project-notes-div,
+.todo-title-div,
+.todo-notes-div {
+  display: grid;
+}
+
+.project-top-row .view,
+.project-title-edit {
+  font-size: 1.5rem;
+  height: 2rem;
+  border: none;
+  color: black;
+  display: inline-block;
+  overflow: visible;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  /*  */
+  padding: 0.15rem;
+  resize: none;
+}
+
+.todo-top-row .view,
+.todo-title-edit {
+  font-size: 1rem;
+  height: 1.5rem;
+  border: none;
+  color: black;
+  display: inline-block;
+  align-items: center;
+  overflow: visible;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.15rem;
+  resize: none;
+}
+
+.project-notes-edit {
+  border: none;
+  font-size: 1rem;
+  color: black;
+  overflow: visible;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.todo-notes-edit {
+  border: none;
+  font-size: 1rem;
+  color: black;
+  overflow: visible;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.project-notes-div .view,
+.project-notes-edit {
+  width: 30rem;
+  font-size: 1rem;
+  min-height: fit-content;
+  border: none;
+  color: black;
+  display: inline-block;
+  overflow: visible;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.15rem;
+  resize: none;
+  justify-self: start;
+}
+
+.todo-notes-div .view,
+.todo-notes-edit {
+  font-size: 1rem;
+  min-height: fit-content;
+  border: none;
+  color: black;
+  display: inline-block;
+  overflow: visible;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0.15rem;
+  resize: none;
+  justify-self: start;
+}
+
+textarea#edit {
+  grid-row: 1;
+  display: inline;
+  height: 100%;
+}
+
+.project-title,
+.project-notes {
+  word-break: break-all;
+}
+
+.todo-title,
+.todo-notes {
+  resize: none;
+  font-size: 1rem;
+  height: 1.5rem;
+  border: none;
+  color: black;
+  overflow: visible;
+  font-family: InterRegular, Verdana, Geneva, Tahoma, sans-serif;
+}
