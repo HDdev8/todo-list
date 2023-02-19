@@ -137,8 +137,8 @@ const renderDisplay = () => {
 };
 
 document.addEventListener("DOMContentLoaded", renderDisplay);
-document.addEventListener("DOMContentLoaded", renderProjectStrikethrough);
-document.addEventListener("DOMContentLoaded", renderTodoStrikethrough);
+// document.addEventListener("DOMContentLoaded", renderProjectStrikethrough);
+// document.addEventListener("DOMContentLoaded", renderTodoStrikethrough);
 
 const loadSelectedProject = (e) => {
   const navListItems = document.querySelectorAll(".nav-list-item");
