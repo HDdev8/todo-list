@@ -11,6 +11,12 @@
 # Local History for Visual Studio Code
 .history/
 
+src/
+!src/model.js
+!src/index.js
+!src/view.js
+!src/styles.css
+
 # Built Visual Studio Code Extensions
 *.vsix
 
