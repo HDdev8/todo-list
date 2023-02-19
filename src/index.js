@@ -80,7 +80,7 @@ const renderProjectStrikethrough = () => {
     `.${project.className}[data-id="${dataId}"] input[type="checkbox"]`
   );
   if (dataId !== localStorage.getItem(dataId)) {
-    !checkbox.checked;
+    checkbox.checked === false;
     const allChildren = document.querySelectorAll(
       `.${project.className}[data-id="${dataId}"] *`
     );
