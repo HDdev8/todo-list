@@ -80,7 +80,7 @@ const renderProjectStrikethrough = () => {
     `.${project.className}[data-id="${dataId}"] input[type="checkbox"]`
   );
   if (dataId !== localStorage.getItem(dataId)) {
-    checkbox.checked = false;
+    !checkbox.checked;
     const allChildren = document.querySelectorAll(
       `.${project.className}[data-id="${dataId}"] *`
     );
@@ -120,6 +120,9 @@ const renderTodoStrikethrough = () => {
   }
 };
 
+document.addEventListener("load", renderOriginalProject);
+document.addEventListener("load", renderNavList);
+
 const renderDisplay = () => {
   const keys = Object.keys(localStorage);
   if (keys.includes("projects") === true) {
@@ -133,9 +136,7 @@ const renderDisplay = () => {
   }
 };
 
-document.addEventListener("load", renderOriginalProject);
-document.addEventListener("load", renderNavList);
-document.addEventListener("DOMContentLoaded", renderDisplay());
+document.addEventListener("DOMContentLoaded", renderDisplay);
 document.addEventListener("DOMContentLoaded", renderProjectStrikethrough);
 document.addEventListener("DOMContentLoaded", renderTodoStrikethrough);
 
@@ -328,7 +329,7 @@ document.addEventListener("click", todoDeleteButtons);
 
 const removeStrikeThrough = (e) => {
   if (e.target.matches(`input[type="checkbox"]`) && !e.target.checked) {
-    e.target.checked = true;
+    e.target.checked;
     const sourceElement = e.target.parentElement.parentElement.parentElement;
     const dataId = sourceElement.dataset.id;
     const allChildren = document.querySelectorAll(
@@ -343,7 +344,7 @@ const removeStrikeThrough = (e) => {
 
 const addStrikeThrough = (e) => {
   if (e.target.matches(`input[type="checkbox"]`) && e.target.checked) {
-    e.target.checked = false;
+    !e.target.checked;
     const sourceElement = e.target.parentElement.parentElement.parentElement;
     const dataId = sourceElement.dataset.id;
     const allChildren = document.querySelectorAll(
