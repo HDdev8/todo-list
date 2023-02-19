@@ -10,11 +10,7 @@ I use mostly CSS Grid for the layout. Projects and Todos are added to arrays, wh
 
 ## Optimizations:
 
-<<<<<<< HEAD
 I loosely tried to implement an MVC pattern, as well as follow SOLID principles. As I move on to further projects, I'm definitely trying to have cleaner code. For example, I think some of my functions could be better abstracted. Also, the design is basic.
-=======
-I loosely tried to implement an MVC pattern, as well as follow SOLID principles. As I move on to further projects, I'm definitely trying to have cleaner code. For example, I think some of my functions could be better abstracted.
->>>>>>> b626d8825a1d84981087877d218ee771e37cdc79
 
 ## Lessons Learned:
 
