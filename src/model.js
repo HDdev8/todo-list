@@ -61,7 +61,8 @@ export const projectArray = PROJECT_ARRAY();
 export const todoArray = TODO_ARRAY();
 
 export const setOriginalProject = () => {
-  if (localStorage.length === 0) {
+  const keys = Object.keys(localStorage);
+  if (keys.includes("projects") === false) {
     const project = projectObjectFactory();
     projectArray.setProject(project);
     localStorage.setItem(

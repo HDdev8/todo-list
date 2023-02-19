@@ -37,17 +37,22 @@ const renderOriginalProject = () => {
   }
 };
 
+const renderFirstProject = () => {
+  const localProjectArray = JSON.parse(localStorage.getItem("projects"));
+  const firstProject = localProjectArray[0];
+  setProjectDisplay(firstProject);
+};
+
+const renderProject = (datasetId) => {
+  const project = getLocalProject("projects", datasetId);
+  setProjectDisplay(project);
+};
+
 const renderNavList = () => {
   const localProjectArray = JSON.parse(localStorage.getItem("projects"));
   for (let project of localProjectArray) {
     setNavListItem(project);
   }
-};
-
-const renderFirstProject = () => {
-  const localProjectArray = JSON.parse(localStorage.getItem("projects"));
-  const firstProject = localProjectArray[0];
-  setProjectDisplay(firstProject);
 };
 
 const renderFirstTodos = () => {
@@ -58,11 +63,6 @@ const renderFirstTodos = () => {
     const tArray = getLocalTodos("todos", firstProject.id);
     for (let todo of tArray) setTodoDisplay(todo);
   }
-};
-
-const renderProject = (datasetId) => {
-  const project = getLocalProject("projects", datasetId);
-  setProjectDisplay(project);
 };
 
 const renderTodos = (datasetId) => {
@@ -121,7 +121,8 @@ const renderTodoStrikethrough = () => {
 };
 
 const renderDisplay = () => {
-  if (localStorage.length > 0) {
+  const keys = Object.keys(localStorage);
+  if (keys.includes("projects") === true) {
     renderNavList();
     restoreProjectArray();
     restoreTodoArray();
