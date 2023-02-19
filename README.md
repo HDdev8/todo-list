@@ -1,20 +1,20 @@
 # Todo List
 
-**Link to project:** (work in progress)
+**Link to project:** https://hddev8.github.io/todo-list/
 
 ## How It's Made:
 
 **Tech used:** HTML, CSS, JavaScript, Webpack
 
-I use mostly CSS Grid and a little Flexbox for the layout. 
+I use mostly CSS Grid for the layout. Projects and Todos are added to arrays, which are then stored in localStorage.
 
 ## Optimizations:
 
-Earlier projects do what they're supposed to do, but they're a bit disorganized, and I wasn't aware of SOLID principles, which the Odin Project is teaching at this stage of the course. For this project, I'm using Factory Functions, learning more about SOLID principles, and trying to incorporate them. 
+I loosely tried to implement an MVC pattern, as well as follow SOLID principles. As I move on to further projects, I'm definitely trying to have cleaner code. For example, I think some of my functions could be better abstracted. Also, the design is basic.
 
 ## Lessons Learned:
 
-I'm learning the basics of Webpack. I'm also incorporating localStorage for the first time.
+By making this project, I learned more about using Webpack. I also learned more about MVC, MVVM, and other design patterns. I was excited to use localStorage for the first time! I gained a better understanding of how and why not to have tightly coupled code. I learned more about clean code and how much I would like to improve.
 
 ## Recent Projects:
 
