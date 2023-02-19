@@ -328,7 +328,7 @@ document.addEventListener("click", todoDeleteButtons);
 
 const removeStrikeThrough = (e) => {
   if (e.target.matches(`input[type="checkbox"]`) && !e.target.checked) {
-    e.target.checked;
+    e.target.checked === true;
     const sourceElement = e.target.parentElement.parentElement.parentElement;
     const dataId = sourceElement.dataset.id;
     const allChildren = document.querySelectorAll(
@@ -343,7 +343,7 @@ const removeStrikeThrough = (e) => {
 
 const addStrikeThrough = (e) => {
   if (e.target.matches(`input[type="checkbox"]`) && e.target.checked) {
-    !e.target.checked;
+    e.target.checked === false;
     const sourceElement = e.target.parentElement.parentElement.parentElement;
     const dataId = sourceElement.dataset.id;
     const allChildren = document.querySelectorAll(
